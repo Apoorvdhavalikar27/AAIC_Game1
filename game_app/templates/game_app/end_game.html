@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shooter Game - End Game</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+
+</head>
+<body>
+    <div id="game-interface">
+        <h1>Animal Shooter Game</h1>
+        <div id="end-game-info">
+            <h2>Game Over!</h2>
+            <p>Your final score is: {{ score }}</p>
+        </div>
+        <a href="{% url 'home' %}">Play Again</a>
+    </div>
+</body>
+</html>

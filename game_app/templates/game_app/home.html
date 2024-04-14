@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shooter Game</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+<body>
+    <div id="game-interface">
+        <h1>Animal Shooter Game</h1>
+        <form action="{% url 'game_app' %}" method="get">
+            <label for="player-name">Enter your name:</label>
+            <input type="text" id="player-name" name="player-name" required>
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shooter Game</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div id="game-interface">
+        <h1>Animal Shooter Game</h1>
+        <div id="player-info">
+            <h2>Score: <span id="player-score">{{ user.score }}</span></h2>
+        </div>
+        <div id="game-area">
+            {% for animal in animals %}
+
+            <div class="animal" style="top: {{ animal.y_coordinate }}px; left: {{ animal.x_coordinate }}px; background-color:{{animal.color}};">{{ animal.name }}</div>
+
+            {% endfor %}
+            <div id="gun-symbol">GUN</div>
+        </div>
+
+
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+<script>
+    document.addEventListener('dblclick', function() {
+        document.body.classList.add('unselectable');
+    });
+</script>
+
+</body>
+</html>
