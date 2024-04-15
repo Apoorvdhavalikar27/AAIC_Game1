@@ -1,6 +1,8 @@
-# AAIC_Game1
+# Aminal Shooting Gsme (Approach-1)
 This is the Shooting Game Assignment using python-Django-HTML-CSS-JS
 
-pip install django
+## To run the application follow following steps:
 
-python manage.py runserver
+1. pip install django
+2. Clone project.
+3. python manage.py runserver
